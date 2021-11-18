@@ -52,6 +52,7 @@ class DS3231:
         else:
             hh = bcd2dec(data[2])
         wday = data[3]
+        print(str(wday))
         DD = bcd2dec(data[4])
         MM = bcd2dec(data[5] & 0x1f)
         YY = bcd2dec(data[6])

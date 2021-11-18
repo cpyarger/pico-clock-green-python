@@ -12,7 +12,8 @@ class Clock(App):
         self.enabled = True
         scheduler.schedule("clock-second", 1000, self.secs_callback)
         scheduler.schedule("clock-minute", 60000, self.mins_callback)
-
+    def get_time(self):
+        self.rtc.get_time()
     def enable(self):
         self.enabled = True
         self.update_time()
